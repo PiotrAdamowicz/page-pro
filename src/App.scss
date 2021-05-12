@@ -1,0 +1,20 @@
+@import "./styles/partials/colors";
+
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: $main-bg;
+  color: rgb(245, 243, 243);
+  height: 100vh;
+  min-height: 834px;
+  min-width: 1112px;
+  font-family: "SFPro";
+}
+@import "./styles/Nav.scss";
+@import "./styles/Main.scss";
+@import "./styles/Footer.scss";
+

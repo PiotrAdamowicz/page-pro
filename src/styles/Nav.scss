@@ -1,0 +1,59 @@
+@import "./partials/colors";
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    font-family: "SFPro";
+    height: 5%;
+    width: 100%;
+    background:$nav-bg;
+    &__logo{
+        margin: .5rem;
+    }
+    &__icon{
+        color: $icon-on-blue;
+    }
+    &__btn{
+        color: $icon-on-blue;
+        background: transparent;
+        border:none;
+    }
+   
+}
+.settings{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    
+    &__btn{
+        border-left: solid 1px $border;
+        color: $icon-on-blue;
+    }
+    &__user{
+        width: 40%;
+        background: $nav-btn;
+        border:none;
+        display: flex;
+        align-items: center;
+    }
+    &__initials{
+        display: block;
+        align-self: center;
+        background: $btn-active;
+        height: 2rem;
+        width: 2rem;
+        border:none;
+        border-radius: .5rem;
+        color: $icon-on-blue;
+    }
+    &__fullName{
+        display: flex;
+        flex-direction: column;
+    }
+    &__firstName, &__lastName{
+        color:$icon-on-blue;
+    }
+    &__menu{
+        width: 30%;
+    }
+}

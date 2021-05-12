@@ -1,0 +1,32 @@
+$royal-blue: #465DEF;
+$mirage: #1C2237;
+$bali-hai:#838EAB;
+$dove-gray:#707070;
+$rajah:#F8A86B;
+$bittersweet:#FB726F;
+$mystic:#E6EBF1;
+$tuna:#3C3C3F;
+
+
+//functional
+$nav-bg:$royal-blue;
+$footer-bg:$mirage;
+$btn-bg:darken($royal-blue, .5%); //also card bg
+$button-group-bg: lighten($mirage, 3%);
+$icons:$bali-hai;
+$icon-on-blue:lighten($royal-blue, 9%);
+$border:$dove-gray;
+$btn-active:rgba(0,0,0,0.1);
+$nav-btn:rgba(0,0,0,0);
+$main-bg:$mystic;
+
+//text
+$text-select:#525F7F;
+$text-primary:$tuna;
+$text-secondary:$bali-hai;
+$text-warning:$rajah;
+$text-error:$bittersweet;
+$text-card-title:$mirage;
+//text on dark
+$text-ondark-primary:#ffffff;
+$text-ondark-secondary:$bali-hai;

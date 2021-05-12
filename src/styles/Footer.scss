@@ -1,0 +1,11 @@
+@import "./partials/colors";
+
+.footer{
+    background: $footer-bg;
+    width: 100%;
+    height: 38%;
+    
+    & >.text{
+        color:$tuna;
+    }
+}
