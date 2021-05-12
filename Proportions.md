@@ -20,6 +20,13 @@ width =34; //~0.4%
 height=34; //4%
 ```
 
+### Logo
+
+```js
+width=26; //2.3%
+height=26; //~3%
+```
+
 ## Main
 
 ```js
@@ -32,4 +39,10 @@ height = 474;//57%
 ```js
 width=1112;
 height = 312;//38%
+```
+
+#### Notes
+
+```js
+1rem = 16px;
 ```

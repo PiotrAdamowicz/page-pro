@@ -8,7 +8,10 @@
     width: 100%;
     background:$nav-bg;
     &__logo{
-        margin: .5rem;
+        // margin: .5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        align-self: center;
     }
     &__icon{
         color: $icon-on-blue;

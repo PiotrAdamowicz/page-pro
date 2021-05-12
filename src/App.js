@@ -1,6 +1,6 @@
 import "./App.scss";
 import Nav from "./components/Nav";
-import Main from "./components/Main";
+import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 
 function App() {
