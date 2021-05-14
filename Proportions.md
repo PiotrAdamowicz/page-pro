@@ -59,6 +59,12 @@ width=1112;
 height = 312;//38%
 ```
 
+#### Footer margin-top
+
+```js
+height=60;//
+```
+
 #### Notes
 
 ```js
