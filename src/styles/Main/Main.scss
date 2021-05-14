@@ -1,24 +1,66 @@
 @import "../partials/colors";
+@import "../partials/sizes";
 
 
 .main{
-    display: grid;
-    width: 100%;
+    margin: 0 auto 0 2.7%;
+    // width: 100%;
     height: 57%;
+    &Grid{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns:repeat(3, 31%);
+        grid-column-gap:20px;     
+    }
+       
+}
+.mainHeader{
+    width: 100%;
     &__title{
         color:$text-primary;
-
+    }
+}
+.search{
+    display: flex;
+    &__iconBg{
+        display: flex;
+        justify-content: center;
+        height: 2.4rem;
+        width: 2.4rem;
+        border: solid 1px $border;
+        border-right: none;
+        border-top-left-radius: $radius-deskopt;
+        border-bottom-left-radius: $radius-deskopt;
+        background-color: $input-bg;
+    }
+    &__icon{
+        align-self: center;
+        height: 1rem;
+    }
+    &__input{
+        border: solid 1px $border;
+        border-left:none;
+        border-bottom-right-radius: $radius-deskopt;
+        border-top-right-radius: $radius-deskopt;
     }
 }
 .card{
+    width: 100%;
+    max-height: 55%;
+    font-size: 1rem;
+    background-color: $input-bg;
     color:$text-primary;
+    box-shadow: 7px 14px 20px -8px $shadow-onlight,-2px 0 18px -8px $shadow-onlight;
+    border-radius:$radius-deskopt;
+   
     &__btn{
         width: 5.1rem;
         height: 2.1rem;
         line-height: 2rem;
         font-size: .9rem;
         text-align: center;
-        color:white;
+        color:$card-light-bg;
         background: $icon-on-blue;
         border:none;
         border-radius: .2rem;
@@ -30,4 +72,101 @@
         display: inline-block;
         margin: 0 auto;
     }
+}
+.cardHeader{
+    display: flex;
+    height: 29%;
+    border-bottom: 1px solid $border;
+    &__message{
+        display: block;
+        margin-left: 0;
+        align-self: center;
+        font-size: 1rem;
+        width: 66%;
+    }
+    &__icon{
+        margin: 2rem 1rem 2rem 1.7rem;
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}
+.cardMain{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    max-height: 40%;
+    margin: 1.4rem .7rem;
+    
+    &__link{
+        font-size: 1rem;
+        align-self: center;
+    }
+    &__btn{
+        position: absolute;
+        transform-origin: 50%;
+        top:50%;
+        right: 0;
+        transform: translateY(-50%);
+        // margin-right: .7rem;
+        color:$card-light-bg;
+        height: 2.4rem;width: 6rem;
+        background-color: $btn-bg;
+        font-size: 1rem;
+        border:none;      
+        border-radius: $radius-deskopt;
+        cursor: pointer;
+    }&__icon{
+        margin-left: .5rem;
+    }
+}
+.cardSelect{
+    display: flex;
+    width: 100%;
+    max-height: 15%;
+    margin-top: 20px;
+    color: $text-card-main;
+    box-shadow: 0 5px 5px 0 $border;
+    &__select{
+        color: inherit;
+        display: flex;
+        
+        margin-left: 1rem;
+        font-size: 1rem;
+        height: 3.4rem;
+        width: 90%;
+        padding: 0 1rem 0 1rem;
+        border: solid 1px $border;
+        border-top-left-radius: $radius-deskopt;
+        border-bottom-left-radius: $radius-deskopt;
+        border-right: none;
+        appearance:none;
+    }
+    &__icon{
+        color: $bali-hai;      
+        height: .5rem;
+    }
+    &__icon--up{
+        transform: rotate(180deg);
+        margin-top: 1rem;
+    }
+    &__icon--down{
+        margin: 12px 0 1rem 0;
+    }
+    &__arrowBtn{
+        display: flex;
+        flex-direction: column;
+        height: 3.4rem;
+        width: 3,4rem;
+        border:1px solid $border;
+        border-left: none;
+        border-top-right-radius: $radius-deskopt;
+        border-bottom-right-radius: $radius-deskopt;
+      
+    }
+    &___arrowDownBtn{
+        border-top:none;
+    }
+}
+.cardFooter{
+    height: 15%;
 }

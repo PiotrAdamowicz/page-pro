@@ -34,6 +34,24 @@ width=1112;
 height = 474;//57%
 ```
 
+### Card
+
+```js
+height=256;//55.9
+width=340//~30%
+```
+#### mainCard
+
+```js
+height=136;//40%
+```
+
+#### Select
+
+```js
+width=320// ~94%
+```
+
 ## Footer
 
 ```js

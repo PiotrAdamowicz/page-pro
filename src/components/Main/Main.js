@@ -10,6 +10,7 @@ export default function Main() {
       select: "Could I have your invoice invoice_id?            ",
       timeStamp: "6 Minutes Ago",
       status: "Not Helpful",
+      iconType: "red",
       id: 0,
     },
     {
@@ -18,6 +19,7 @@ export default function Main() {
       select: "Search Answers to train",
       timeStamp: "57 Minutes Ago",
       status: "Not Understood",
+      iconType: "yellow",
       id: 1,
     },
     {
@@ -25,6 +27,7 @@ export default function Main() {
       select: "",
       timeStamp: "3 Hours Ago",
       status: "Not Understood",
+      iconType: "yellow",
       id: 2,
     },
   ];
@@ -36,9 +39,11 @@ export default function Main() {
   return (
     <main className="main">
       <HeaderMain text={HeaderText} />
-      {userQuerys.map((query) => {
-        return <CardMain key={query.id} query={query} />;
-      })}
+      <div className="mainGrid">
+        {userQuerys.map((query) => {
+          return <CardMain key={query.id} query={query} />;
+        })}
+      </div>
     </main>
   );
 }
