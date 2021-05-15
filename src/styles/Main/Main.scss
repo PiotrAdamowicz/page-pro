@@ -3,9 +3,9 @@
 
 
 .main{
-    margin: 0 auto 0 2.7%;
+    margin: 0 auto 0 3%;
     // width: 100%;
-    height: 57%;
+    height: 49%;
     &Grid{
         display: grid;
         height: 100%;
@@ -109,7 +109,8 @@
         transform: translateY(-50%);
         // margin-right: .7rem;
         color:$card-light-bg;
-        height: 2.4rem;width: 6rem;
+        height: 2.4rem;
+        width: rem;
         background-color: $btn-bg;
         font-size: 1rem;
         border:none;      

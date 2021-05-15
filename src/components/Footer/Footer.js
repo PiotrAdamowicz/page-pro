@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import HeadFooter from "./HeadFooter";
 import CardFooter from "./CardFooter";
 
 export default function Footer() {
+  const [active, setActive] = useState(false);
   const cards = [
     {
       title: "Do you offer money back guarantee?",
@@ -36,11 +37,21 @@ export default function Footer() {
       "— Based on conversations, these questions often requires a follow up",
   };
 
+  const clickHandler = (event) => {
+    setActive(true);
+    console.log(event.target);
+  };
+
   return (
     <footer className="footer">
       <HeadFooter text={head} />
       {cards.map((card) => (
-        <CardFooter key={card.id} data={card} />
+        <CardFooter
+          key={card.id}
+          onClick={clickHandler}
+          active={active}
+          data={card}
+        />
       ))}
     </footer>
   );

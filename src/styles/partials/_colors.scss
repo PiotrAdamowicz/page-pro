@@ -8,6 +8,7 @@ $bittersweet:#FB726F;
 $mystic:#E6EBF1;
 $tuna:#3C3C3F;
 $white:white;
+$white-opac: rgba(0,0,0, 0.04);
 $martinique:#32325D;
 $blue-bayoux:#525F7F;
 
@@ -16,18 +17,25 @@ $blue-bayoux:#525F7F;
 $nav-bg:$royal-blue;
 $footer-bg:$mirage;
 $btn-bg:darken($royal-blue, .5%); //also card bg
-$button-group-bg: lighten($mirage, 3%);
+$button-group-bg: lighten($mirage, 5%);
 $icons:$bali-hai;
 $icon-on-blue:lighten($royal-blue, 9%);
-$main-border:$dove-gray;
-$border: $mystic;
 $btn-active:rgba(0,0,0,0.1);
 $nav-btn:rgba(0,0,0,0);
 $main-bg:$mystic;
 $input-bg:$white;
+$shadow-onlight:$dove-opac;
+$shadow-ondark:lighten($mirage, 3%);
+
+//border
+$main-border:$dove-gray;
+$border: $mystic;
+$border-ondark:$white-opac;
+
+//cards
 $card-light-bg:$white;
 $card-dark-bg:lighten($mirage, 3%);
-$shadow-onlight:$dove-opac;
+
 
 //text
 $text-select:#525F7F;

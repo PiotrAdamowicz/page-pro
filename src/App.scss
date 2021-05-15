@@ -1,11 +1,15 @@
 @import "./styles/partials/colors";
 
+
 *{
   margin:0;
   box-sizing: border-box;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   background-color: $main-bg;
   color: rgb(245, 243, 243);
@@ -14,6 +18,7 @@
   min-width: 1112px;
   font-family: "SFPro";
 }
+@import "./styles/Typography.scss";
 @import "./styles/Nav.scss";
 @import "./styles/Main/Main.scss";
 @import "./styles/Footer.scss";
