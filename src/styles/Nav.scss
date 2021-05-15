@@ -1,17 +1,18 @@
 @import "./partials/colors";
 
-.nav{
-    display: flex;
-    justify-content: space-between;
+.header{
+    
+    // display: flex;
+    // justify-content: space-between;
     font-family: "SFPro";
     height: 5%;
     width: 100%;
     background:$nav-bg;
     &__logo{
-        // margin: .5rem;
-        height: 1.5rem;
-        width: 1.5rem;
-        align-self: center;
+        // // margin: .5rem;
+        // height: 1.5rem;
+        // width: 1.5rem;
+        // align-self: center;
     }
     &__icon{
         color: $icon-on-blue;
@@ -20,6 +21,17 @@
         color: $icon-on-blue;
         background: transparent;
         border:none;
+    }
+    .nav{
+        display: grid;
+        grid-template-columns: repeat(7, 14%);
+        height: 5%;
+        width: 100%;
+        &__btn{
+            color: $icon-on-blue;
+            background: transparent;
+            border:none;
+        }
     }
    
 }
