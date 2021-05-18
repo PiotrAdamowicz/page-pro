@@ -12,10 +12,10 @@
   justify-content: space-between;
   text-align: center;
   background-color: $main-bg;
-  color: rgb(245, 243, 243);
+  color: $white;
   height: 100vh;
   min-height: 834px;
-  min-width: 1112px;
+  min-width: 1000px;
   font-family: "SFPro";
 }
 @import "./styles/Typography.scss";

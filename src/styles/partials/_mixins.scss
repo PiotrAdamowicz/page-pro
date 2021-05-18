@@ -1,0 +1,16 @@
+@mixin select{
+    border: solid 1px $border;
+    border-top-left-radius: $radius-deskopt;
+    border-bottom-left-radius: $radius-deskopt;
+    
+    border-right: none;
+    appearance:none;
+    &Container{
+    display: flex;
+    border-radius: $radius-deskopt;
+    box-shadow: 7px 9px 20px -8px $shadow-onlight,-2px 0 18px -8px $shadow-onlight;
+    }
+}
+@mixin cardPadding {
+        margin:0 1rem;
+}

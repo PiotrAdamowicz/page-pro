@@ -7,30 +7,38 @@ $rajah:#F8A86B;
 $bittersweet:#FB726F;
 $mystic:#E6EBF1;
 $tuna:#3C3C3F;
-$white:white;
-$white-opac: rgba(0,0,0, 0.04);
 $martinique:#32325D;
 $blue-bayoux:#525F7F;
+
+$white:white;
+//opacity
+$white-opac04: rgba(255,255,255, 0.04);
+$white-opac: rgba(255,255,255, 0.2);
+$white-opac60: rgba(255,255,255, 0.6);
 
 
 //functional
 $nav-bg:$royal-blue;
 $footer-bg:$mirage;
-$btn-bg:darken($royal-blue, .5%); //also card bg
-$button-group-bg: lighten($mirage, 5%);
 $icons:$bali-hai;
-$icon-on-blue:lighten($royal-blue, 9%);
-$btn-active:rgba(0,0,0,0.1);
-$nav-btn:rgba(0,0,0,0);
+$icon-on-blue:$white-opac60 ;
 $main-bg:$mystic;
 $input-bg:$white;
 $shadow-onlight:$dove-opac;
 $shadow-ondark:lighten($mirage, 3%);
 
+$logo: $white-opac;
+
+//buttons
+$btn-bg:darken($royal-blue, .5%); //also card bg
+$btn-active:rgba(200,200,200,0.12);
+$nav-btn:rgba(0,0,0,0);
+$button-group-bg: lighten($mirage, 5%);
+
 //border
 $main-border:$dove-gray;
 $border: $mystic;
-$border-ondark:$white-opac;
+$border-ondark:$white-opac04;
 
 //cards
 $card-light-bg:$white;
@@ -45,6 +53,7 @@ $text-warning:$rajah;
 $text-error:$bittersweet;
 $text-card-title:$mirage;
 $text-card-main:$blue-bayoux;
+$text-large:$tuna;
 //text on dark
-$text-ondark-primary:$white;
-$text-ondark-secondary:$bali-hai;
+$text-onblue-primary:$white;
+$text-onblue-secondary:$bali-hai;

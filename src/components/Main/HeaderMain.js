@@ -8,8 +8,10 @@ export default function HeaderMain(props) {
     <section className="mainHeader">
       <h1 className="mainHeader__title">{title}</h1>
       <h2 className="mainHeader__subtitle">{subtitle}</h2>
-      <Select block="mainHeaderSelect" select={select} />
-      <Search block="mainHeaderSearch" />
+      <div className="mainHeader__inputs">
+        <Select block="mainHeader" select={select} />
+        <Search block="main" />
+      </div>
     </section>
   );
 }

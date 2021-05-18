@@ -6,7 +6,8 @@ import thumbsDownIcon from "../../icons/thumbs-down.svg";
 import commentAltSmileIcon from "../../icons/comment-alt-smile.svg";
 import expandArrowsAltIcon from "../../icons/expand-arrows-alt.svg";
 import lightbulbIcon from "../../icons/lightbulb.svg";
-import levelUpIcon from "../../icons/level-up.svg";
+
+import Icon from "../Icon";
 
 export default function footerFooter(props) {
   const { title, subtitle, comments, like, dislike, active, id } = props.data;
@@ -25,10 +26,13 @@ export default function footerFooter(props) {
           </h2>
           <h3 className="footer__subtitle">
             {active ? (
-              <img
-                className="footer__icon"
-                src={levelUpIcon}
-                alt="level up icon"
+              <Icon
+                data={{
+                  block: "footer",
+                  icon: "level-up.svg",
+                  text: "",
+                  id: 0,
+                }}
               />
             ) : null}
             {subtitle}

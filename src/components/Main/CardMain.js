@@ -24,7 +24,7 @@ export default function Card(props) {
           />
           <h3 className="cardHeader__message">{message}</h3>
         </div>
-        <Select block="cardSelect" arrow select={select} />
+        <Select block="cardSelect" select={select} />
         {select ? (
           <div className="cardMain">
             <a className="cardMain__link" href="#">
@@ -42,8 +42,10 @@ export default function Card(props) {
           </div>
         ) : null}
         <div className="cardFooter">
-          <span className="cardFooter__timeStamp">{timeStamp}</span> —{" "}
-          <span className="cardFooter__status">{status}</span>
+          <span className="text">
+            <span className="cardFooter__timeStamp">{timeStamp}</span> —
+            <span className="cardFooter__status">{status}</span>
+          </span>
           <img className="cardFooter__icon" src={trashIcon} alt="trash icon" />
         </div>
       </section>
