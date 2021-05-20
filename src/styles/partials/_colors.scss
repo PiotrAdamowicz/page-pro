@@ -1,4 +1,5 @@
 $royal-blue: #465DEF;
+$havelock-blue: #6c98e0;
 $mirage: #1C2237;
 $bali-hai:#838EAB;
 $dove-gray:#707070;
@@ -14,6 +15,7 @@ $white:white;
 //opacity
 $white-opac04: rgba(255,255,255, 0.04);
 $white-opac: rgba(255,255,255, 0.2);
+$white-opac12: rgba(255,255,255, 0.12);
 $white-opac60: rgba(255,255,255, 0.6);
 
 
@@ -26,12 +28,13 @@ $main-bg:$mystic;
 $input-bg:$white;
 $shadow-onlight:$dove-opac;
 $shadow-ondark:lighten($mirage, 3%);
+$outline:$havelock-blue;
 
 $logo: $white-opac;
 
 //buttons
 $btn-bg:darken($royal-blue, .5%); //also card bg
-$btn-active:rgba(200,200,200,0.12);
+$btn-active:rgba(214, 120, 120, 0.12);
 $nav-btn:rgba(0,0,0,0);
 $button-group-bg: lighten($mirage, 5%);
 
@@ -43,6 +46,7 @@ $border-ondark:$white-opac04;
 //cards
 $card-light-bg:$white;
 $card-dark-bg:lighten($mirage, 3%);
+$card-active-bg:lighten($royal-blue, .05%);
 
 
 //text
@@ -54,6 +58,8 @@ $text-error:$bittersweet;
 $text-card-title:$mirage;
 $text-card-main:$blue-bayoux;
 $text-large:$tuna;
+$text-active:$white;
+
 //text on dark
 $text-onblue-primary:$white;
 $text-onblue-secondary:$bali-hai;

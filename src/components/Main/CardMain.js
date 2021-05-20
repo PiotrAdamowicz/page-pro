@@ -6,7 +6,6 @@ import trashIcon from "../../icons/trash.svg";
 import commentAltIcon from "../../icons/comments-alt.svg";
 import robotIcon from "../../icons/robot.svg";
 import Select from "../Select";
-
 export default function Card(props) {
   const { message, select, timeStamp, status, iconType } = props.query;
   return (

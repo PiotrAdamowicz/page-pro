@@ -1,63 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 
 import csupportLogo from "../../icons/csupport-logo.svg";
 import robotIcon from "../../icons/robot.svg";
 import dotsIcon from "../../icons/ellipsis-v.svg";
 
-import IconNav from "../Icon";
+import Button from "../Button";
 
 export default function Nav() {
+  const [focus, setFocus] = useState(false);
   const buttons = [
     {
       block: "nav",
       icon: "diagnoses.svg",
       text: "Answers",
-      id: 0,
+      isActive: false,
+      id: "Answers",
+      focused: "btn",
     },
     {
       block: "nav",
       icon: "comment-dots.svg",
       text: "Questions",
-      id: 1,
+      isActive: false,
+      id: "Questions",
+      focused: "btn",
     },
     {
       block: "nav",
-      icon: "icons/comments.svg",
+      icon: "comments.svg",
       text: "Conversations",
-      id: 2,
+      isActive: false,
+      id: "Conversations",
+      focused: "btn",
     },
     {
       block: "nav",
-      icon: "icons/chart-pie.svg",
+      icon: "chart-pie.svg",
       text: "Analytics",
-      id: 3,
+      isActive: false,
+      id: "Analytics",
+      focused: "btn",
     },
     {
       block: "nav",
-      icon: "icons/cog.svg",
+      icon: "cog.svg",
       text: "Settings",
-      id: 4,
+      isActive: false,
+      id: "Settings",
+      focused: "btn",
     },
   ];
+  const focusHandler = () => {
+    setFocus(!focus);
+  };
+  const blurHandler = () => {
+    setFocus(false);
+  };
+
   return (
     <header className="header">
       <nav className="nav">
-        <img className="nav__logo" alt="Support Logo " src={csupportLogo} />
-
-        {buttons.map((button) => {
-          const { block, text, id } = button;
-          return (
-            <button key={id} className={`${block}__btn`}>
-              <IconNav data={button} />
-              <span key={`${id}1`} className={`${block}__text`}>
-                {text}
-              </span>
-            </button>
-          );
-        })}
-
-        <div className="settings">
-          <button className="settings__btn">
+        <div className="nav__logo">
+          <img
+            className="nav__logoIcon"
+            alt="Support Logo "
+            src={csupportLogo}
+          />
+        </div>
+        <div className="nav__buttons">
+          {buttons.map((button) => {
+            return <Button key={button.id} data={button} />;
+          })}
+        </div>
+        <div onBlur={blurHandler} className="nav__settings">
+          <button
+            onFocus={focusHandler}
+            className={`settings__btn ${
+              focus ? " settings__btn--focused" : ""
+            }`}
+          >
             <span className="settings__text">
               Test Bot{" "}
               <img
@@ -67,14 +88,24 @@ export default function Nav() {
               />
             </span>
           </button>
-          <button className=" settings__user">
+          <button
+            onFocus={focusHandler}
+            className={`settings__user ${
+              focus ? "settings__user--focused" : ""
+            }`}
+          >
             <span className="settings__initials">KC</span>
             <div className="settings__fullName">
               <span className="settings__firstName">Kasper</span>
               <span className="settings__lastName">AGENT</span>
             </div>
           </button>
-          <button className=" settings__menu">
+          <button
+            onFocus={focusHandler}
+            className={`settings__menu ${
+              focus ? "settings__menu--focused" : ""
+            }`}
+          >
             <img className="settings__icon" src={dotsIcon} alt="dots menu" />
           </button>
         </div>

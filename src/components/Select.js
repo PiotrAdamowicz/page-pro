@@ -1,30 +1,33 @@
-import React from "react";
-import chervonDownArrow from "../icons/chevron-down.svg";
+import React, { useState } from "react";
 
 export default function Select(props) {
   const { select, block } = props;
 
+  const [focus, setFocus] = useState(false);
+  const focusHandler = () => {
+    setFocus(true);
+  };
+  const blurHandler = () => {
+    setFocus(false);
+  };
+
   return (
     <>
       {select ? (
-        <div className={`${block}__selectContainer`}>
-          <select className={`${block}__select`} defaultValue={select}>
-            <option>{select}</option>
+        <div
+          onClick={focusHandler}
+          onBlur={blurHandler}
+          className={`${block}__selectContainer ${
+            focus ? `${block}__selectContainer--focused` : ""
+          }`}
+        >
+          <select
+            onClick={focusHandler}
+            className={`${block}__select`}
+            defaultValue={select}
+          >
+            <option className={`${block}__selectOption`}>{select}</option>
           </select>
-          <div className={`${block}__selectBtnContainer`}>
-            <button className={`${block}__arrowBtn`}>
-              <img
-                className={`${block}__icon ${block}__rotate--up`}
-                src={chervonDownArrow}
-                alt="up arrow"
-              />
-              <img
-                className={`${block}__icon ${block}__icon--down`}
-                src={chervonDownArrow}
-                alt="down arrow"
-              />
-            </button>
-          </div>
         </div>
       ) : null}
     </>

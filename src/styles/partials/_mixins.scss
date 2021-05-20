@@ -1,16 +1,99 @@
 @mixin select{
     border: solid 1px $border;
-    border-top-left-radius: $radius-deskopt;
-    border-bottom-left-radius: $radius-deskopt;
-    
-    border-right: none;
+    border-radius: $radius-deskopt;
     appearance:none;
+    color: $text-secondary;
+    appearance: none;
+    padding: 0.5rem .8rem 0.5rem .8rem;
+    background: url("../../icons/select-arrows.svg")no-repeat 95% 50%;
+    transition: border .2s ease-in;
+
     &Container{
     display: flex;
+    border: solid 1px transparent;
     border-radius: $radius-deskopt;
     box-shadow: 7px 9px 20px -8px $shadow-onlight,-2px 0 18px -8px $shadow-onlight;
+    outline:none;
+    &--focused{
+        background: transparent;
+        border: 1px solid $outline;
+    }
     }
 }
 @mixin cardPadding {
         margin:0 1rem;
+}
+
+@mixin clickable{
+    cursor: pointer;
+    transition:background .2s ease-in , color .2s ease-in;
+}
+
+//active stylings
+@mixin activeText{
+    &--active{
+        color: $text-active;
+    }
+}
+@mixin activeBg{
+    &--active{
+        background:$card-active-bg;
+    }
+}
+@mixin activeIcon{
+    transform: scale(1);
+}
+@mixin link{
+    &:link { color:$text-secondary; }
+    &:visited { color: $mirage }
+    &:hover { color:$bali-hai }
+    &:active { color: $blue-bayoux }
+}
+@mixin focusedStatBtn{
+    &--focused{
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            top: 10%;
+            left:15%;
+            right:15%;
+            bottom:10%;
+            background-color: $white-opac12;
+            border-radius: $radius-deskopt;
+        }
+    }
+}
+@mixin navBtn{
+    position: relative;
+    @include clickable;
+    width: auto;
+    margin-left: 1rem;
+    padding-left: 2%;
+    &--focused{
+        &::after{
+            content: "";
+            display:block;
+            top:10%;
+            left:-5%;
+            right:-2%;
+            height: 80%;
+            position: absolute;
+            background-color: $white-opac12;
+            border-radius: $radius-deskopt;
+        }
+    }
+}
+@mixin settingBtn{
+    &::after{
+        content: "";
+        display:block;
+        top:10%;
+        left:5%;
+        right:5%;
+        height: 80%;
+        position: absolute;
+        background-color: $white-opac12;
+        border-radius: $radius-deskopt;
+    }
 }
