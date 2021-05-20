@@ -18,7 +18,7 @@ With reference to: [https://github.com/Pagepro/frontend-recruitment-task-dashboa
 
 1. I had difficulties with that. Couldn't find/install dependencies so I bootstrapper project with create react app.
 
-1. A lot f refactoring, I've used mainly flex few times grid layout.
+1. A lot f refactoring, I've used mainly flexbox but also tried grid few times.
 
 1. I've used mainly Sass variables no native CSS one's
 
